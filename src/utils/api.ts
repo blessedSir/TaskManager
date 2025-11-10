@@ -2,9 +2,7 @@ import axios from "axios";
 import type { Task } from "../types/Task";
 
 // Замените на URL вашего API на Render
-const API_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://taskmanager-server-ua0a.onrender.com";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const getToken = () => localStorage.getItem("token");
 
