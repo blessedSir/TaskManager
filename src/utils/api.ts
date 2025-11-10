@@ -1,7 +1,10 @@
 import axios from "axios";
 import type { Task } from "../types/Task";
 
-const API_URL = "https://taskmanager-server-ua0a.onrender.com/";
+// Замените на URL вашего API на Render
+const API_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://taskmanager-server-ua0a.onrender.com";
 
 const getToken = () => localStorage.getItem("token");
 
@@ -43,7 +46,7 @@ export const loginUser = async (email: string, password: string) => {
     const user = res.data[0];
     const token = btoa(`${user.email}:${user.password}`);
     localStorage.setItem("token", token);
-    localStorage.setItem("userId", user.id); // Сохраняем ID пользователя
+    localStorage.setItem("userId", user.id);
     return user;
   } else {
     throw new Error("Invalid email or password");
@@ -54,7 +57,7 @@ export const loginUser = async (email: string, password: string) => {
 export const fetchTasks = async (): Promise<Task[]> => {
   const userId = localStorage.getItem("userId");
   const res = await axiosAuth.get<Task[]>("/tasks", {
-    params: { userId }, // Фильтруем задачи по пользователю
+    params: { userId },
   });
   return res.data;
 };
