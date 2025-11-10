@@ -203,8 +203,8 @@ This project is open source and available under the MIT License.
 
 Sergey Levkovskiy
 
-- GitHub: [@yourusername](https://github.com/blessedSir)
-- LinkedIn: [Your Profile](https://linkedin.com/in/blessedsir/)
+- GitHub: [@blessedSir](https://github.com/blessedSir)
+- LinkedIn: [Profile](https://linkedin.com/in/blessedsir/)
 
 ## 🙏 Acknowledgments
 
