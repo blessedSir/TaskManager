@@ -1,7 +1,7 @@
 import axios from "axios";
 import type { Task } from "../types/Task";
 
-const API_URL = "http://localhost:3001";
+const API_URL = "https://taskmanager-server-ua0a.onrender.com/";
 
 const getToken = () => localStorage.getItem("token");
 
